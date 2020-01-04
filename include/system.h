@@ -8,31 +8,30 @@
 #include "processor.h"
 
 class System {
-public:
-    Processor &Cpu();
+ public:
+  Processor &Cpu();
 
-    std::vector<Process> &Processes();
+  std::vector<Process> &Processes();
 
-    float MemoryUtilization();
+  float MemoryUtilization();
 
-    long UpTime();
+  long UpTime();
 
-    int TotalProcesses();
+  int TotalProcesses();
 
-    int RunningProcesses();
+  int RunningProcesses();
 
-    static std::string Kernel();
+  static std::string Kernel();
 
-    std::string OperatingSystem();
+  std::string OperatingSystem();
 
-private:
-    Processor cpu_ = {};
-    std::vector<Process> processes_ = {};
+ private:
+  Processor cpu_ = {};
+  std::vector<Process> processes_ = {};
 
-    void UpdateProcess(int pid);
+  void UpdateProcess(int pid);
 
-    void UpdateProcesses();
-
+  void UpdateProcesses();
 };
 
 #endif

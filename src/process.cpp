@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+#include "linux_parser.h"
 #include "process.h"
 
 using std::string;
@@ -31,9 +32,17 @@ long int Process::UpTime() { return _upTime; }
 // Overloading the "less than" comparison operator for Process objects
 
 bool Process::operator<(Process const &a) const {
-    if (_cpuUtilization > a._cpuUtilization)
-        return true;
-    else
-        return false;
+  if (_cpuUtilization > a._cpuUtilization)
+    return true;
+  else
+    return false;
+}
 
+Process::Process(int pid) {
+  _pid = pid;
+  _user = LinuxParser::User(_pid);
+  _command = LinuxParser::Command(_pid);
+  _ram = LinuxParser::Ram(_pid);
+  _upTime = LinuxParser::UpTime(_pid);
+  _cpuUtilization = LinuxParser::CpuUtilization(_pid);
 }

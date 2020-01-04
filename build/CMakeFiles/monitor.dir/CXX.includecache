@@ -45,6 +45,12 @@ processor.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/format.cpp
 string
 -
+time.h
+-
+sstream
+-
+iomanip
+-
 format.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/format.h
 
@@ -56,6 +62,10 @@ unistd.h
 string
 -
 vector
+-
+iomanip
+-
+sstream
 -
 linux_parser.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/linux_parser.h
@@ -97,10 +107,18 @@ vector
 -
 process.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/process.h
+linux_parser.h
+/home/shivam/workplace/system-monitor-linux-cpp/src/linux_parser.h
 
 /home/shivam/workplace/system-monitor-linux-cpp/src/processor.cpp
 processor.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/processor.h
+linux_parser.h
+/home/shivam/workplace/system-monitor-linux-cpp/src/linux_parser.h
+vector
+/home/shivam/workplace/system-monitor-linux-cpp/src/vector
+string
+/home/shivam/workplace/system-monitor-linux-cpp/src/string
 
 /home/shivam/workplace/system-monitor-linux-cpp/src/system.cpp
 unistd.h
@@ -119,4 +137,6 @@ processor.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/processor.h
 system.h
 /home/shivam/workplace/system-monitor-linux-cpp/src/system.h
+linux_parser.h
+/home/shivam/workplace/system-monitor-linux-cpp/src/linux_parser.h
 
