@@ -10,18 +10,28 @@
 class System {
 public:
     Processor &Cpu();
+
     std::vector<Process> &Processes();
+
     float MemoryUtilization();
+
     long UpTime();
+
     int TotalProcesses();
+
     int RunningProcesses();
-    std::string Kernel();
+
+    static std::string Kernel();
+
     std::string OperatingSystem();
 
 private:
     Processor cpu_ = {};
     std::vector<Process> processes_ = {};
 
+    void UpdateProcess(int pid);
+
+    void UpdateProcesses();
 
 };
 
