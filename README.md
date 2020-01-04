@@ -1,10 +1,10 @@
-# CppND-System-Monitor
+# hTop like System Monitor in C++
 
-Starter code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive) <img src="https://engineering.nyu.edu/sites/default/files/2019-01/tandon_long_color.png" alt="NYU Logo" width="130" height="whatever">
 
-Follow along with the classroom lesson to complete the project!
+The following project is a part of Udacity’s C++ NanoDegree program. The aim of project is to create an Htop like system monitor.
 
-![System Monitor](images/monitor.png)
+![](README.assets/Screenshot from 2020-01-04 05-26-02.png)
 
 ## Udacity Linux Workspace
 [Udacity](https://www.udacity.com/) provides a browser-based Linux [Workspace](https://engineering.udacity.com/creating-a-gpu-enhanced-virtual-desktop-for-udacity-497bdd91a505) for students. 
