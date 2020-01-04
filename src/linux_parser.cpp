@@ -265,19 +265,20 @@ long LinuxParser::UpTime(int pid) {
 }
 
 vector<string> LinuxParser::CpuUtilization() {
-  string desc, user, nice, system, idle, iowait, irq, softirq, steal, guest,
-      guest_nice;
-  string line;
-  std::ifstream stream(kProcDirectory + kStatFilename);
-  if (stream.is_open()) {
-    std::getline(stream, line);
-    std::istringstream linestream(line);
-    linestream >> desc >> user >> nice >> system >> idle >> iowait >> irq >>
-        softirq >> steal >> guest >> guest_nice;
-  }
+    string line, cpu, cpu_time;
+    vector<string> cpu_utilizations;
+    std::ifstream filestream(kProcDirectory + kStatFilename);
 
-  return vector<string>{user, nice,    system, idle,  iowait,
-                        irq,  softirq, steal,  guest, guest_nice};
+    if (filestream.is_open()) {
+        std::getline(filestream, line);
+        std::istringstream linestream(line);
+        linestream  >> cpu;
+
+        while (linestream >> cpu_time) {
+            cpu_utilizations.emplace_back(cpu_time);
+        }
+    }
+    return cpu_utilizations;
 }
 
 /*
