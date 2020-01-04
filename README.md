@@ -4,7 +4,7 @@
 
 The following project is a part of Udacity’s C++ NanoDegree program. The aim of project is to create an Htop like system monitor.
 
-![](./assets/Screenshot from 2020-01-04 05-52-12.png)
+![img](./assets/Screenshot from 2020-01-04 05-52-12.png)
 
 ## ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
