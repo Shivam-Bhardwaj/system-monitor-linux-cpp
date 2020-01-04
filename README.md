@@ -4,7 +4,7 @@
 
 The following project is a part of Udacity’s C++ NanoDegree program. The aim of project is to create an Htop like system monitor.
 
-![Sample image](assets/Screenshot from 2020-01-04 05-25-44.png)
+![](assets/Screenshot from 2020-01-04 05-52-12.png)
 
 ## ncurses
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
@@ -23,8 +23,13 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 ## Instructions
 
 1. Clone the project repository: `git clone https://github.com/udacity/CppND-System-Monitor-Project-Updated.git`
-
 2. Build the project: `make build`
-
 3. Run the resulting executable: `./build/monitor`
 
+The code was tested on the following specifications
+
+- **CPU:** `Intel(R) Core(TM) i9-8950HK CPU @ 4.8 Ghz`
+- **GPU:** `Nvidia GeForce GTX 1050 Ti Mobile`
+- **RAM:** `32 GB`
+- **OS:** `Ubuntu 16.04.6 LTS (Xenial Xerus)` 
+- **Kernal:** `4.15.0-72-generic`
