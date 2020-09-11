@@ -1,10 +1,11 @@
 #include "processor.h"
+
 #include "linux_parser.h"
 #include "string"
 #include "vector"
 
-using std::vector;
 using std::string;
+using std::vector;
 
 // REFERENCE:https://stackoverflow.com/questions/23367857/accurate-calculation-of-cpu-usage-given-in-percentage-in-linux
 float Processor::Utilization() {

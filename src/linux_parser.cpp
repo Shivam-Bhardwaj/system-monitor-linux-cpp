@@ -1,6 +1,8 @@
 #include "linux_parser.h"
+
 #include <dirent.h>
 #include <unistd.h>
+
 #include <iomanip>
 #include <sstream>
 #include <string>
@@ -110,7 +112,7 @@ long LinuxParser::Jiffies() { return 0; }
 
 // TO DO: Read and return the number of active jiffies for a PID
 // REMOVE: [[maybe_unused]] once you define the function
-long LinuxParser::ActiveJiffies(int pid[[maybe_unused]]) { return 0; }
+long LinuxParser::ActiveJiffies(int pid [[maybe_unused]]) { return 0; }
 
 // TO DO: Read and return the number of active jiffies for the system
 long LinuxParser::ActiveJiffies() { return 0; }
@@ -265,20 +267,20 @@ long LinuxParser::UpTime(int pid) {
 }
 
 vector<string> LinuxParser::CpuUtilization() {
-    string line, cpu, cpu_time;
-    vector<string> cpu_utilizations;
-    std::ifstream filestream(kProcDirectory + kStatFilename);
+  string line, cpu, cpu_time;
+  vector<string> cpu_utilizations;
+  std::ifstream filestream(kProcDirectory + kStatFilename);
 
-    if (filestream.is_open()) {
-        std::getline(filestream, line);
-        std::istringstream linestream(line);
-        linestream  >> cpu;
+  if (filestream.is_open()) {
+    std::getline(filestream, line);
+    std::istringstream linestream(line);
+    linestream >> cpu;
 
-        while (linestream >> cpu_time) {
-            cpu_utilizations.emplace_back(cpu_time);
-        }
+    while (linestream >> cpu_time) {
+      cpu_utilizations.emplace_back(cpu_time);
     }
-    return cpu_utilizations;
+  }
+  return cpu_utilizations;
 }
 
 /*
